@@ -1,0 +1,38 @@
+# Terraform State Files (NEVER COMMIT THESE)
+*.tfstate
+*.tfstate.*
+
+# Terraform Plan Files (Can contain sensitive info)
+*.tfplan
+
+# Terraform Variables Files (Often contain secrets - use .tfvars.example instead)
+*.tfvars
+*.auto.tfvars
+
+# Terraform Log Files
+*.log
+crash.log
+
+# Terraform Local Working Directory (Stores providers, modules - can be large)
+.terraform/
+
+# Terraform Override Files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration files
+.terraformrc
+terraform.rc
+
+# Local OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor directories
+.vscode/
+.idea/
+
+# AWS credentials file (if accidentally placed in repo dir)
+.aws/
