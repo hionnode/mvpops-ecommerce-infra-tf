@@ -1,0 +1,15 @@
+# environments/dev/terraform.tfvars.example
+# This is an example file. Copy this content to 'terraform.tfvars' (which is gitignored)
+# and uncomment/adjust values as needed for your specific deployment.
+# Using defaults from variables.tf is often sufficient for this reference guide.
+
+# aws_region    = "us-east-1"
+# environment   = "dev"
+# project_name  = "mvpops-ecommerce"
+# domain_name   = "your-actual-domain.com" # Replace with your domain if not using mvpops.dev
+
+# Example of setting tags:
+# tags = {
+#   Owner = "your-email@example.com"
+#   CostCenter = "project-alpha"
+# }
