@@ -35,7 +35,7 @@ locals {
 
 # Application Assets S3 Bucket (Private Resource defined by Public Code)
 module "app_assets_s3_bucket" {
-  source = "../../modules/s3_bucket" # Relative path to the public s3_bucket module
+  source = "../../../modules/s3_bucket" # Relative path to the public s3_bucket module
 
   bucket_name = "${var.project_name}-${var.environment}-assets-s3" # e.g., mvpops-ecommerce-dev-assets-s3
   tags        = merge(local.common_tags, { Purpose = "ApplicationAssets" })
@@ -87,13 +87,13 @@ resource "aws_route53_record" "ses_domain_dkim_verification_records" {
 
 # -- phase 1: networking infrastructure --
 
-module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
-  version = "~> 5.0"
+# module "vpc" {
+#   source = "terraform-aws-modules/vpc/aws"
+#   version = "~> 5.0"
 
-  name = "${var.project_name}-${var.environment}-vpc"
-  cidr = var.vpc_cidr
-  azs = var.vpc_azs
-  private_subnets = var.vpc_private_subnets
-  public_subnets = var.vpc_public_subnets
-}
+#   name = "${var.project_name}-${var.environment}-vpc"
+#   cidr = var.vpc_cidr
+#   azs = var.vpc_azs
+#   private_subnets = var.vpc_private_subnets
+#   public_subnets = var.vpc_public_subnets
+# }
